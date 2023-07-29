@@ -1,9 +1,9 @@
 close all
 clear all
 
-addpath '/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/PG&E_Project/matlab programs'
+addpath '/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/Project/matlab programs'
 
-load('/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/PG&E_Project/matlab programs/PRs_vs_Reliability_Diagram_Score_Xval_Multi_model.mat',...
+load('/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/Project/matlab programs/PRs_vs_Reliability_Diagram_Score_Xval_Multi_model.mat',...
     'all_vars_final_day_cmip6_altered',...
     'all_predictor_variables',...
     'temp_scenario_vars',...
@@ -18,7 +18,7 @@ load('/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Proje
     'model_configs_to_loop_through')
 
 
-load('/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/PG&E_Project/matlab programs/logistic_regression_fire_probabilities.mat',...
+load('/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/Project/matlab programs/logistic_regression_fire_probabilities.mat',...
     'all_fire_probabilities_logistic_regression',...
     'LR_labes')
 
@@ -428,7 +428,7 @@ temp_scenarios_i = 2;
          xlabel('Date')
          ylabel('Fraction of Risk Attributable to Warming (%)')
 
-print(gcf,'-depsc','-painters','/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/PG&E_Project/matlab programs/perf_score_time_series_fig')
+print(gcf,'-depsc','-painters','/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/Project/matlab programs/perf_score_time_series_fig')
 
 ymins = [270 0 0 5];
 ymaxs = [310 5 30 30];
@@ -1067,7 +1067,7 @@ days_of_interest = [20 9 26 22 22];
 
 addpath '/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/wind_solar_droughts/clim_expl_data/'
 
-load(strcat('/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/PG&E_Project/matlab programs/prob_large_growth_temp_CMIP6_gridded_day_of_interest_',...
+load(strcat('/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/Project/matlab programs/prob_large_growth_temp_CMIP6_gridded_day_of_interest_',...
             num2str(years_of_interest(day_to_read_i)),'_',...
             num2str(month_of_interest(day_to_read_i)),'_',...
             num2str(days_of_interest(day_to_read_i)),'_',...
@@ -1088,7 +1088,7 @@ all_predictor_variables_figs = ["temperature (K)",...
                            "land use (category)",...
                            "vegetation frac (%)"];
 
-load('/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/PG&E_Project/matlab programs/read_org_background_temp_CMIP6.mat',...
+load('/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/Project/matlab programs/read_org_background_temp_CMIP6.mat',...
 'wrf_lat_2d',...
 'wrf_lon_2d')
 
@@ -1958,7 +1958,7 @@ FARs_above_thresh_inds = find(all_fire_FARs_top_models_mean >= FAR_mean);
         scatterm(Ignition_lat(FARs_above_thresh_inds),Ignition_lon(FARs_above_thresh_inds),5,'o','filled','MarkerFaceColor',"red",'MarkerFaceAlpha',0.8)
 
         colormap(brewermap([],'BuGn'))
-        print(gcf,'/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/PG&E_Project/matlab programs/FARs_below_thresh_map','-r1000','-dpdf')
+        print(gcf,'/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/Project/matlab programs/FARs_below_thresh_map','-r1000','-dpdf')
 
         figure('Position', [100, 100, 600, 600]);
         set(gcf,'color',[1 1 1]);
@@ -2343,7 +2343,7 @@ combos_var_2 = 5;
         scatterm(Ignition_lat(all_predictors_PRs_below_1_hot_inds),Ignition_lon(all_predictors_PRs_below_1_hot_inds),15,'o','filled','MarkerFaceColor',"red",'MarkerFaceAlpha',0.8)
 
         colormap(brewermap([],'BuGn'))
-        print(gcf,'/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/PG&E_Project/matlab programs/PRs_below_1_hot_cold_map','-r1000','-dpdf')
+        print(gcf,'/Users/patrickbrown/Dropbox/SJSU Weather Climate & Human Systems Lab/Projects/Fire/Project/matlab programs/PRs_below_1_hot_cold_map','-r1000','-dpdf')
 
 
         figure('Position', [100, 100, 600, 600]);
